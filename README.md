@@ -6,9 +6,9 @@ The input file and the sample file(s) must be placed within the folder of the
 puzzle.
 
 The input file is named `input.txt`, while the sample file is named
-`sample.txt`. In a situation where the puzzle provides more than one samples, the
-sample file names can be deduced by reading `main.scm` for that puzzle - they
-will mostly be `sample.0.txt`, `sample.1.txt`, and so on.
+`sample.txt`. In a situation where the puzzle provides more than one samples, their
+file names can be deduced by reading `main.scm` for that puzzle - they
+will mostly be named as `sample.0.txt`, `sample.1.txt`, and so on.
 
 ## To run
 To run on Gambit:
