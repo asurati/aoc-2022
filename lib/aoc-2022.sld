@@ -2,11 +2,19 @@
 ;; Copyright (c) 2023 Amol Surati
 
 (define-library (aoc-2022)
-  (export read-lines set-insert set-intersect)
+  (export read-lines set-insert-item set-append-set set-intersect)
   (import (scheme base))
   (begin
 	;; A tiny set implementation.
-	(define set-insert
+	(define set-append-set
+	  (lambda (set0 set1)
+		(let loop ((set0 set0)
+				   (set1 set1))
+		  (if (null? set1)
+			  set0
+			  (loop (set-insert-item set0 (car set1)) (cdr set1))))))
+
+	(define set-insert-item
 	  (lambda (set item)
 		(if (eq? #f (member item set))
 			(cons item set)
