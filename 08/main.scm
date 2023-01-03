@@ -145,13 +145,9 @@
   (lambda (ht-map-rot)
 	(score-to-the-top-bottom ht-map-rot score-to-the-right)))
 
-(define score-map-minor
-  (lambda (l r t b)
-	(* l r t b)))
-
 (define score-map-major
   (lambda (l r t b)
-	(map score-map-minor l r t b)))
+	(map * l r t b)))
 
 (define max-major
   (lambda (row)
