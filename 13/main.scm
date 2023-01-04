@@ -65,7 +65,7 @@
 ;; correct-order +1
 ;; wrong-order -1
 ;; continue comparing 0
-		  
+
 (define compare-two
   (lambda (a b)
 	;;(display "comparing:")
