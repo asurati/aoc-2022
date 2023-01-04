@@ -2,9 +2,15 @@
 ;; Copyright (c) 2023 Amol Surati
 
 (define-library (aoc-2022)
-  (export read-lines set-insert-item set-append-set set-intersect)
+  (export read-lines set-insert-item set-append-set set-intersect
+		  list-head)
   (import (scheme base))
   (begin
+	;; take k elements from the start of the list
+	(define list-head
+	  (lambda (list k)
+		(reverse (list-tail (reverse list) (- (length list) k)))))
+
 	;; A tiny set implementation.
 	(define set-append-set
 	  (lambda (set0 set1)
