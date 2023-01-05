@@ -313,4 +313,4 @@
 (display "Uncomment the run-file call, and\n")
 (display "    wait for at least 13 minutes (Gauche-gosh timing on my machine).\n")
 (display "    wait for at least  3 minutes (Gambit-gsi timing on my machine).\n")
-(run-file "input.txt")
+;;(run-file "input.txt")
