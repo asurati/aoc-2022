@@ -85,7 +85,7 @@
 		   (res (cons e res))
 		   (e (cons row (+ 2 col)))
 		   (res (cons e res))
-		   
+
 		   (e (cons (+ 1 row) (+ 2 col)))
 		   (res (cons e res))
 		   (e (cons (+ 2 row) (+ 2 col)))
@@ -314,22 +314,22 @@
 		   ;;(x (display step))
 		   ;;(x (newline))
 		   (shape-0 (build-shape-at-pos type pos-0))
-		   
+
 		   ;;(x (display "before-push-shape:"))
 		   ;;(x (display shape-0))
 		   ;;(x (newline))
-		   
+
 		   (pos-1 (push-sideways pos-0 step))
 		   (shape-1 (build-shape-at-pos type pos-1))
 		   (sh-1-valid (is-valid-pos-list? tower shape-1))
-					 
+
 		   (pos-0 (if sh-1-valid pos-1 pos-0))
 		   (shape-0 (if sh-1-valid shape-1 shape-0))
-		   
+
 		   ;;(x (display "after-push-shape:"))
 		   ;;(x (display shape-0))
 		   ;;(x (newline))
-					 
+
 		   (pos-1 (push-down pos-0))
 		   (shape-1 (build-shape-at-pos type pos-1)))
 	  (if (is-valid-pos-list? tower shape-1)	;; down is valid
@@ -341,7 +341,7 @@
 			;;(display "after:\n")
 			;;(display-tower tower)
 			(cons tower 'stopped))))))
-  
+
 (define drop-new-shape
   (lambda (tower steps step-ix type)
 	(let loop ((pos (get-next-shape-pos tower))
@@ -436,7 +436,7 @@
 				   (height (+ height h-diff)))
 			  height)
 			(loop ix tower num type (cons pat-1 pat-list)))))))
-			
+
 			;;(display "next-type:") (display type)(newline)
 			;;(display "thrr:")(display thrr)(newline)
 			;;(display "next-step-ix:")(display ix)(newline)

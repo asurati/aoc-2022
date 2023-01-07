@@ -218,7 +218,7 @@
 			(if (> sum 0)
 				(loop (cdr t-list) (cons t s-list) res)
 				(loop (cdr t-list) s-list (cons t res))))))))
-		  
+
 (define run-file
   (lambda (file-name)
 	(let* ((lines (call-with-input-file file-name read-lines))

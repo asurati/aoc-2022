@@ -52,7 +52,7 @@
 		  (if (string=? lt rt)
 			  (remove-self-loops rest result)
 			  (remove-self-loops rest (cons pair result)))))))
-			   
+
 (define build-working-valve-pairs
   (lambda (valves all-valves result)
 	(if (null? valves)
@@ -96,7 +96,7 @@
 
 ;; for each valve, add all-valves distances
 ;; if there a link, the dist is 1.
-;; if both valves are 
+;; if both valves are
 (define build-dist-for-valves
   (lambda (all-valves valves result)
 	(if (null? valves)
@@ -181,7 +181,7 @@
 			   (score (+ score benefit))
 			   (open-list (cons a-name open-list))
 			   (m-mark (+ 1 m-mark)))	;; time taken to open a
-		  
+
 		  (let loop ((valves all-valves)
 					 (a-score 0))
 			(if (null? valves)
@@ -234,7 +234,7 @@
 				 (score (+ score a-benefit b-benefit))
 				 (open-list (cons a-name open-list))
 				 (open-list (cons b-name open-list)))
-						
+
 			(let loop ((v-pairs all-v-pairs)
 					   (a-score 0))
 			  (if (null? v-pairs)
@@ -271,8 +271,8 @@
 			  (begin (display "score-until-now:")
 					 (display max-score)(newline)))
 		  (run-part-2 all-valves all-v-pairs (cdr v-pairs) dists max-score)))))
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		  
-			   
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ;; TODO build a table for open valves from start. m-mark is just after last
 ;; restrict the # of entries in table to sum (i = 1 to 10) i!
 ;; valve open.
